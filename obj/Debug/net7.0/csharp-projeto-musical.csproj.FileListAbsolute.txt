@@ -1,0 +1,15 @@
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\bin\Debug\net7.0\csharp-projeto-musical.exe
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\bin\Debug\net7.0\csharp-projeto-musical.deps.json
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\bin\Debug\net7.0\csharp-projeto-musical.runtimeconfig.json
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\bin\Debug\net7.0\csharp-projeto-musical.dll
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\bin\Debug\net7.0\csharp-projeto-musical.pdb
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\csharp-projeto-musical.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\csharp-projeto-musical.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\csharp-projeto-musical.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\csharp-projeto-musical.AssemblyInfo.cs
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\csharp-projeto-musical.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\csharp-projeto-musical.dll
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\refint\csharp-projeto-musical.dll
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\csharp-projeto-musical.pdb
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\csharp-projeto-musical.genruntimeconfig.cache
+C:\Users\user\Desktop\jamile P\dev\csharp-projeto-musical\obj\Debug\net7.0\ref\csharp-projeto-musical.dll
