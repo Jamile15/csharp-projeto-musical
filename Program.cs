@@ -27,7 +27,10 @@ void ExibirOpcoesDoMenu()
      int opcaoEscolhidaNumerica = int.Parse(opcaoEscolhida);
      if (opcaoEscolhidaNumerica == 1)
      {
-        Console.WriteLine("Você digitou a a opção " + opcaoEscolhida)
+        Console.WriteLine("Você digitou a a opção " + opcaoEscolhida);
+     } else if (opcaoEscolhidaNumerica == 2)
+     {
+        Console.WriteLine("Você digitou a a opção " + opcaoEscolhida);
      };
  
 }
