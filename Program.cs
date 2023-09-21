@@ -19,8 +19,18 @@ void ExibirOpcoesDoMenu()
     Console.WriteLine("digite 4 para exibir uma media de uma banda");
     Console.WriteLine("digite -1 para sair");
 
+    Console.Write("\n digite a sua opção:");
 
-};
+    ///pegar o valor que for digitado 
+     string opcaoEscolhida =  Console.ReadLine()!;
+     //convertendo a string da opção escolhida pra um valor inteiro 
+     int opcaoEscolhidaNumerica = int.Parse(opcaoEscolhida);
+     if (opcaoEscolhidaNumerica == 1)
+     {
+        Console.WriteLine("Você digitou a a opção " + opcaoEscolhida)
+     };
+ 
+}
 
 ExibirMensagemDeBoasVindas();
 ExibirOpcoesDoMenu();
