@@ -76,16 +76,24 @@ void MostrarBandasregistradas()
     Console.WriteLine("************************************************");
     Console.WriteLine("Lista de bandas");
     Console.WriteLine("************************************************\n");
-    for (int i = 0; i < listaDasBandas.Count; i++)
+    //percorrendo lista de forma verbosa
+
+    //for (int i = 0; i < listaDasBandas.Count; i++)
+    //{
+    //    Console.WriteLine($"Banda {listaDasBandas[i]}");
+   // }
+//////////////////////////////////////////////////////////////////////////////////
+    foreach(string banda in listaDasBandas)
     {
-        Console.WriteLine($"Banda {listaDasBandas[i]}");
+            Console.WriteLine($"Banda {banda}");
+
     }
-    
     Console.WriteLine("\nDigite uma tecla para voltar ao menu");
     //capturando o que o user digitou 
     Console.ReadKey();
     Console.Clear();
     ExibirOpcoesDoMenu();
+
 
 }
 
