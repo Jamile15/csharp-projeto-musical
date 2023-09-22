@@ -14,7 +14,7 @@ void ExibirLogo()
     Console.WriteLine(mensagemDeBoasVindas);
 }
 
-List<string> listaDasBandas = new List<string>();
+List<string> listaDasBandas = new List<string>{ "Mamonas", "Nx0"};
 
 void ExibirOpcoesDoMenu()
 {
@@ -75,13 +75,13 @@ void MostrarBandasregistradas()
     Console.Clear();
     Console.WriteLine("************************************************");
     Console.WriteLine("Lista de bandas");
-    Console.WriteLine("************************************************");
+    Console.WriteLine("************************************************\n");
     for (int i = 0; i < listaDasBandas.Count; i++)
     {
         Console.WriteLine($"Banda {listaDasBandas[i]}");
     }
-
-    Console.WriteLine("Digite uma tecla para voltar ao menu");
+    
+    Console.WriteLine("\nDigite uma tecla para voltar ao menu");
     //capturando o que o user digitou 
     Console.ReadKey();
     Console.Clear();
