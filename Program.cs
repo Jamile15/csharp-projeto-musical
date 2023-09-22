@@ -1,9 +1,12 @@
 ﻿//Screen Sound
 
+using System.ComponentModel.Design;
+using System.Runtime.InteropServices;
+
 string mensagemDeBoasVindas = "Não to pronta pra essa semana";
 
 
-void ExibirMensagemDeBoasVindas()
+void ExibirLogo()
 {
     Console.WriteLine(@"
 █▀█ █░█ █▀▀ █▀█ █▀█   █▀▄▀█ █ █▄░█ █░█ ▄▀█   █▀▀ ▄▀█ █▀▄▀█ ▄▀█
@@ -14,6 +17,7 @@ void ExibirMensagemDeBoasVindas()
 
 void ExibirOpcoesDoMenu()
 {
+    ExibirLogo();
     Console.WriteLine("\nDigirte 1 para registrar uma banda");
     Console.WriteLine("Digite 2 para mostrar todas as bandas");
     Console.WriteLine("digite 3 para avaliar uma banda");
@@ -32,8 +36,7 @@ void ExibirOpcoesDoMenu()
     // ao invez de ficar usando varios if else uso o switch passao o parametro e uso o case pra tipo "caso o 1 seja digitado retorne 
     switch (opcaoEscolhidaNumerica)
     {
-        case 1:
-            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+        case 1: RegistrarBandas();
             break;
         case 2:
             Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
@@ -52,5 +55,17 @@ void ExibirOpcoesDoMenu()
     Console.WriteLine("tchau tchau :)");
 }
 
-ExibirMensagemDeBoasVindas();
+void RegistrarBandas() 
+{
+    Console.Clear();
+    Console.WriteLine("Registro de banda");
+    Console.Write("Digite o nome da banda que deseja registrar:");
+    string nomeDaBanda = Console.ReadLine()!;
+    //concatenação de string diferente das outras linguas
+    Console.WriteLine($"a A banda {nomeDaBanda} foi registrada com sucesso");
+    Thread.Sleep(2000);
+    ExibirOpcoesDoMenu();
+}
+
+
 ExibirOpcoesDoMenu();
