@@ -17,6 +17,8 @@ void ExibirLogo()
 //List<string> listaDasBandas = new List<string>{ "Mamonas", "Nx0"};
 
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
+bandasRegistradas.Add("mamonas", new List<int> {10, 8, 6});
+bandasRegistradas.Add("nx0", new List<int> ());
 
 void ExibirOpcoesDoMenu()
 {
@@ -63,7 +65,7 @@ void RegistrarBandas()
     ExibitTituloDaOpcao("Registro das bandas");
     Console.Write("Digite o nome da banda que deseja registrar:");
     string nomeDaBanda = Console.ReadLine()!;
-    listaDasBandas.Add(nomeDaBanda);
+    bandasRegistradas.Add(nomeDaBanda, new List<int>());
     //concatenação de string diferente das outras linguas
     Console.WriteLine($"a A banda {nomeDaBanda} foi registrada com sucesso");
     Thread.Sleep(2000);
@@ -83,7 +85,7 @@ void MostrarBandasregistradas()
     //    Console.WriteLine($"Banda {listaDasBandas[i]}");
    // }
 //////////////////////////////////////////////////////////////////////////////////
-    foreach(string banda in listaDasBandas)
+    foreach(string banda in bandasRegistradas.Keys)
     {
             Console.WriteLine($"Banda {banda}");
 
