@@ -14,7 +14,9 @@ void ExibirLogo()
     Console.WriteLine(mensagemDeBoasVindas);
 }
 
-List<string> listaDasBandas = new List<string>{ "Mamonas", "Nx0"};
+//List<string> listaDasBandas = new List<string>{ "Mamonas", "Nx0"};
+
+Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
 
 void ExibirOpcoesDoMenu()
 {
