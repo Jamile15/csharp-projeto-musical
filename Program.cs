@@ -1,6 +1,7 @@
 ﻿//Screen Sound
 
 using System.ComponentModel.Design;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 string mensagemDeBoasVindas = "Não to pronta pra essa semana";
@@ -13,9 +14,10 @@ void ExibirLogo()
 ");
     Console.WriteLine(mensagemDeBoasVindas);
 }
-
+//uma lista de coisas
 //List<string> listaDasBandas = new List<string>{ "Mamonas", "Nx0"};
 
+//dicionario da pra criar uma lista e atribuir valores como nome de banda e notas
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
 bandasRegistradas.Add("mamonas", new List<int> {10, 8, 6});
 bandasRegistradas.Add("nx0", new List<int> ());
@@ -45,8 +47,8 @@ void ExibirOpcoesDoMenu()
         case 2:
             MostrarBandasregistradas();
             break;
-        case 4:
-            Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
+        case 3:
+            AvaliarUmaBanda();
             break;
         case -1:
             Console.WriteLine("Você escolheu a opção " + opcaoEscolhidaNumerica);
@@ -57,6 +59,15 @@ void ExibirOpcoesDoMenu()
 
     }
     Console.WriteLine("tchau tchau :)");
+}
+
+void ExibitTituloDaOpcao (string titulo)
+{
+    int quantidadeLetras = titulo.Length;
+    string asteriscos = string.Empty.PadLeft(quantidadeLetras,'*');
+    Console.WriteLine(asteriscos);
+    Console.WriteLine(titulo);
+    Console.WriteLine(asteriscos + "\n");
 }
 
 void RegistrarBandas()
@@ -99,13 +110,29 @@ void MostrarBandasregistradas()
 
 }
 
-void ExibitTituloDaOpcao (string titulo)
+void AvaliarUmaBanda()
 {
-    int quantidadeLetras = titulo.Length;
-    string asteriscos = string.Empty.PadLeft(quantidadeLetras,'*');
-    Console.WriteLine(asteriscos);
-    Console.WriteLine(titulo);
-    Console.WriteLine(asteriscos + "\n");
+    //digite qual banda deseja avaliar
+    //verificar se a banda existe no dicionario 
+    //SearchOption existir atribuir uma nota
+    // se não pode voltar pro menu principal
+    Console.Clear();
+    ExibitTituloDaOpcao("Avaliar banda");
+    Console.Write("Digite o nome da banda que deseja avaliar:");
+    string nomeDaBanda =  Console.ReadLine()!;
+    if(bandasRegistradas.ContainsKey(nomeDaBanda))
+    {
+
+    }else
+    {
+        Console.WriteLine($"A banda {nomeDaBanda} não foi encontrada!");
+        Console.WriteLine("digite uma tecla para voltar ao menu principal");
+        //qualquer tecla readkey
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesDoMenu();
+    }
+
 }
 
 ExibirOpcoesDoMenu();
