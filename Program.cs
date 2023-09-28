@@ -9,8 +9,13 @@ string mensagemDeBoasVindas = "Não to pronta pra essa semana";
 void ExibirLogo()
 {
     Console.WriteLine(@"
-█▀█ █░█ █▀▀ █▀█ █▀█   █▀▄▀█ █ █▄░█ █░█ ▄▀█   █▀▀ ▄▀█ █▀▄▀█ ▄▀█
-▀▀█ █▄█ ██▄ █▀▄ █▄█   █░▀░█ █ █░▀█ █▀█ █▀█   █▄▄ █▀█ █░▀░█ █▀█
+
+░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
+██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗
+╚█████╗░██║░░╚═╝██████╔╝█████╗░░█████╗░░██╔██╗██║  ╚█████╗░██║░░██║██║░░░██║██╔██╗██║██║░░██║
+░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║
+██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
+╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░
 ");
     Console.WriteLine(mensagemDeBoasVindas);
 }
@@ -151,20 +156,25 @@ void ExibirMedia()
 {
     Console.Clear();
     ExibitTituloDaOpcao("Exibir media banda");
-    Console.Write("Digite o nome da banda que deseja avaliar:");
+    Console.WriteLine("\nDigite o nome da banda que deseja avaliar:");
     string nomeDaBanda = Console.ReadLine()!;
     if(bandasRegistradas.ContainsKey (nomeDaBanda))
     {
-
+        List<int> notasDabanda = bandasRegistradas[nomeDaBanda];
+        Console.WriteLine($"\nA média da banda {nomeDaBanda} é {notasDabanda.Average ()}");
+        Console.WriteLine("Digite uma media para voltar ao menu principal");
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesDoMenu();
     }
     else
     {
-        Console.WriteLine($"\n A banda {nomeDaBanda} não foi encontrada");
+        Console.WriteLine($" A banda {nomeDaBanda} não foi encontrada");
         Console.WriteLine("Digite uma tecla para voltar ao menu");
         Console.ReadKey();
         Console.Clear();
         ExibirOpcoesDoMenu();
-        
+
 
     }
 }
